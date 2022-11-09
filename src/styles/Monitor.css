@@ -1,0 +1,19 @@
+@import url("main.css");
+.Monitor {
+  background-color: var(--complementary-dark-color);
+  height: 35%;
+  margin: 0 0 0.9vh 0;
+  padding: 30px 30px;
+  font-size: 1.45em;
+}
+.area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--main-ligth-color);
+  height: 100%;
+  border-radius: 3vw;
+  text-align: center;
+  width: 100%;
+}

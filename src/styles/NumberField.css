@@ -1,0 +1,64 @@
+@import url("main.css");
+.NumberField {
+  background-color: var(--complementary-dark-color);
+  display: flex;
+  align-items: center;
+  padding: 30px 30px;
+  margin: 0 1.5vw 0 5vw;
+  padding: 5vh 2vw;
+  min-width: 35%;
+  font-size: 1.45em;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5vw;
+  height: 100%;
+  width: 100%;
+  align-content: space-around;
+}
+.grid button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 7.5vmin;
+  transition: 0.5s;
+}
+
+.grid :not(.number_zero, .options_equal) {
+  width: 7.5vmin;
+  justify-self: center;
+}
+
+.number {
+  background-color: var(--unactive-ligth-color);
+}
+.number_zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-radius: 3vw !important;
+}
+.number:hover {
+  background-color: var(--main-ligth-color);
+}
+.options {
+  background-color: var(--complementary-dark-color);
+  color: var(--complementary-ligth-color);
+}
+.options:hover {
+  color: var(--main-ligth-color);
+}
+.options_main {
+  background-color: var(--main-ligth-color);
+}
+.options_main:hover {
+  font-weight: bold;
+}
+
+.options_equal {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  border-radius: 3vw !important;
+}

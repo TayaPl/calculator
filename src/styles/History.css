@@ -1,0 +1,28 @@
+@import url("main.css");
+.History {
+  background-color: var(--complementary-dark-color);
+  height: 65%;
+  margin: 0.9vh 0 0 0;
+  padding: 30px 30px;
+}
+.wrap {
+  background-color: var(--unactive-ligth-color);
+  width: 100%;
+  height: 25%;
+  border-radius: 3vw;
+  margin: 0.5vh 0;
+  transition: 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.wrap:hover {
+  background-color: var(--main-ligth-color);
+}
+.wrap__unactive {
+  cursor: default;
+}
+.wrap__unactive:hover {
+  background-color: var(--unactive-ligth-color);
+}
