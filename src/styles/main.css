@@ -1,7 +1,8 @@
 :root {
-	--main-dark-color: #311D3F;
-	--complementary-dark-color: #522546;
-	--main-ligth-color: #E23E57;
-	--complementary-ligth-color: #88304E;
-	--unactive-ligth-color: rgba(226, 62, 87, 0.5);
-  }
+  --main-dark-color: #311d3f;
+  --complementary-dark-color: #522546;
+  --main-ligth-color: #e23e57;
+  --complementary-ligth-color: #88304e;
+  --unactive-ligth-color: rgba(226, 62, 87, 0.5);
+  --unactive-dark-color: rgba(82, 37, 70, 0.5);
+}

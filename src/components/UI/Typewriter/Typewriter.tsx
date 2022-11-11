@@ -3,13 +3,12 @@ import "./Typewriter.css";
 
 const mathExpressions = [
   "15/2=7,5",
-  "1/0=err",
+  "1/0=∞",
   "8×0=0",
   "15-5=10",
   "2+2=4",
   "10%3=1",
-  "3^3=27",
-  "√16=4",
+  "3(2+2)=12",
 ];
 
 export default function TypewriterProps() {

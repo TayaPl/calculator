@@ -8,19 +8,12 @@ interface MonitorProps {
 }
 
 const Monitor: FC<MonitorProps> = ({ className }) => {
-  const history = useAppSelector((state) => state.history.history);
   const mathExp = useAppSelector((state) => state.mathExp.mathExp);
   return (
     <div className={className + " Monitor"}>
       <div className="container">
-        <div className="area">
-          {mathExp !== "" ? (
-            mathExp
-          ) : history[0].mathexp !== "" ? (
-            history[0].mathexp
-          ) : (
-            <Typewriter></Typewriter>
-          )}
+        <div className="area scroll">
+          {mathExp !== "" ? mathExp : <Typewriter></Typewriter>}
         </div>
       </div>
     </div>

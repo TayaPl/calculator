@@ -1,12 +1,14 @@
 import React, { FC } from "react";
 import "../styles/NumberField.css";
 import { useAppSelector, useAppDispatch } from "../hooks";
+import { calc } from "../helpers/calc/calc";
 import {
   addToMathExp,
   removeFromMathExp,
   removeMathExp,
 } from "../store/mathExpSlice";
 import { addToHistory } from "../store/historySlice";
+import { store } from "../store";
 
 interface NumberFieldProps {
   className?: string;
@@ -18,20 +20,31 @@ const NumberField: FC<NumberFieldProps> = ({ className }) => {
 
   const handleClick = (event: React.MouseEvent<HTMLInputElement>) => {
     const target = event.target as HTMLButtonElement;
-    if (String(target.innerHTML) === "C") dispatch(removeFromMathExp(""));
-    else if (String(target.innerHTML) === "=" && mathExp.length > 0) {
-      if (mathExp !== "=") {
-        dispatch(addToMathExp(String(target.innerHTML)));
-        dispatch(addToHistory(mathExp));
+    if (String(target.innerHTML) === "C") dispatch(removeFromMathExp());
+    else if (String(target.innerHTML) === "=") {
+      if (!(mathExp.match(/=/g) || []).length && mathExp.length > 0) {
+        const result = calc(mathExp);
+        console.log(result[result.length - 1]);
+        dispatch(
+          addToMathExp(
+            "=" +
+              (isNaN(Number(result)) || result[result.length - 1] === "."
+                ? "err"
+                : Number(result) === Infinity
+                ? "∞"
+                : result)
+          )
+        );
+        dispatch(addToHistory(store.getState().mathExp.mathExp));
+        dispatch(removeMathExp());
       }
-      dispatch(removeMathExp(""));
     } else if (String(target.innerHTML).length === 1) {
       dispatch(addToMathExp(String(target.innerHTML)));
     }
   };
   const handleDoubleClick = (event: React.MouseEvent<HTMLInputElement>) => {
     const target = event.target as HTMLButtonElement;
-    if (String(target.innerHTML) === "C") dispatch(removeMathExp(""));
+    if (String(target.innerHTML) === "C") dispatch(removeMathExp());
   };
 
   return (
@@ -58,15 +71,29 @@ const NumberField: FC<NumberFieldProps> = ({ className }) => {
           <button className="options">-</button>
 
           <button className="number number_zero">0</button>
-          <button className="number">,</button>
+          <button className="number">.</button>
           <button className="options">+</button>
 
           <button className="options">%</button>
-          <button className="options">^</button>
-          <button className="options">√</button>
-          <button className="options_main">C</button>
+          <button className="options">(</button>
+          <button className="options">)</button>
+          <button
+            className={
+              (mathExp.length <= 0 ? "options_main__inactive " : "") +
+              "options_main"
+            }
+          >
+            C
+          </button>
 
-          <button className="options_main options_equal">=</button>
+          <button
+            className={
+              (mathExp.length <= 0 ? "options_main__inactive " : "") +
+              "options_main options_equal"
+            }
+          >
+            =
+          </button>
         </div>
       </div>
     </div>

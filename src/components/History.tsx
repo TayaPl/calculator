@@ -17,10 +17,10 @@ const History: FC<HistoryProps> = ({ className }) => {
         {history?.map((el: { id: string; mathexp: string }) => {
           return (
             <button
-              id={el.id}
+              key={el.id}
               className={el.mathexp === "" ? "wrap wrap__unactive" : "wrap"}
               onClick={() => {
-                dispatch(removeMathExp(""));
+                dispatch(removeMathExp());
                 dispatch(addToMathExp(el.mathexp));
               }}
             >

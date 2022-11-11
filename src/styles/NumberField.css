@@ -54,11 +54,18 @@
   background-color: var(--main-ligth-color);
 }
 .options_main:hover {
-  font-weight: bold;
+  font-weight: 600;
 }
-
 .options_equal {
   grid-column-start: 1;
   grid-column-end: 5;
   border-radius: 3vw !important;
+}
+.options_main__inactive {
+  cursor: default;
+  background-color: var(--unactive-dark-color);
+  color: var(--unactive-ligth-color);
+}
+.options_main__inactive:hover {
+  font-weight: normal;
 }

@@ -13,7 +13,8 @@
   margin: 0.5vh 0;
   transition: 2s;
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  padding: 0 1vw;
   align-items: center;
   overflow: hidden;
 }
