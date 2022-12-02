@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+# Калькулятор
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Просто - Числа**
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+![Изображение Калькулятора](https://sun9-6.userapi.com/impg/URwiXE3sydBKEcOvoAjYKtY4vt3_Kjikz8JMaQ/ag9pbxk7rcM.jpg?size=1500x821&quality=96&sign=3685f0274ed0950e3dba26474ffda42b&type=album)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+▶️**Демо**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Демонстрация здесь: <https://tayapl.github.io/calculator/>
 
-### `npm test`
+✨ **Функционал**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+:white_check_mark: Складывать числа
+:white_check_mark: Вычитать числа
+:white_check_mark: Умножать числа
+:white_check_mark: Делить числа
+:white_check_mark: Находить остаток от деления чисел
+:white_check_mark: Округлять число до 7 знаков после запятой
+:white_check_mark: Проводить операции с круглыми скобками
+:white_check_mark: Проводить операции с отрицательными числами
+:white_check_mark: Стирать символ
+:white_check_mark: Стирать все выражение
+:white_check_mark: Сохранять результаты выражений в LocalStorage
+:white_check_mark: При клике на старое выражение, находящееся в истории, возвращаться к работе с ним
+:white_check_mark: Вычисление бесконечности
+:white_check_mark: Вычисление ошибочных случаев
+:black_square_button: При двойном клике на старое выражение, находящееся в истории, возвращаться к работе с его результатом
+:black_square_button: Проводить операции с результатами старых выражений из истории
 
-### `npm run build`
+**🚀 Технологии**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React
+- React Hooks
+- Redux
+- TypeScript
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**👉 Контакты**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Email: qa.important@gmail.com
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**📍 P.S.**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+В этом проекте шло изучение TypeScript и Redux! Всегда буду рада обратной связи :)
