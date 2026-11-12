@@ -38,10 +38,6 @@
 - Redux
 - TypeScript
 
-**👉 Контакты**
-
-- Email: qa.important@gmail.com
-
 ---
 
 **📍 P.S.**
